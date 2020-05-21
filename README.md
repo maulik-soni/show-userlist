@@ -1,3 +1,6 @@
+- Pull repository.
+- run `yarn` in project directory
+
 ## Available Scripts
 
 In the project directory, you can run:
