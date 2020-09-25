@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +11,39 @@ import AppHeader from "./components/AppHeader";
 import Cookies from 'js-cookie'
 
 export default function App() {
+  const [renderRoutes, setRenderRoutes] = React.useState(false);
+  useEffect(()=>{
+    setTimeout(()=>{
+      new Promise((resolve)=>{
+        console.log("routes added");
+        setRenderRoutes(true);
+        resolve(true);
+      })
+    }, 5000);
+  })
+  const generateRoute=()=>{
+    return(
+      <>
+        <PrivateRoute path="/users0">
+          <UserListContainer />
+        </PrivateRoute>
+        <PrivateRoute path="/users1">
+          <UserListContainer />
+        </PrivateRoute>
+        <PrivateRoute path="/users2">
+          <UserListContainer />
+        </PrivateRoute>
+        <PrivateRoute path="/users3">
+          <UserListContainer />
+        </PrivateRoute>
+        <PrivateRoute path="/users4">
+          <UserListContainer />
+        </PrivateRoute>
+      </>
+    );
+  }
+
+  console.log(!!Cookies.get('token'));
   return (
     <Router>
         <Switch>
@@ -20,6 +53,7 @@ export default function App() {
             <PrivateRoute path="/users">
               <UserListContainer />
             </PrivateRoute>
+            {renderRoutes && generateRoute()}
           </AppHeader>
         </Switch>
     </Router>

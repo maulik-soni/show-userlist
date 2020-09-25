@@ -47,7 +47,6 @@ const LoginPage =(props)=>{
   const [accountId, setAccountId] = React.useState('');
   const [pswd, setPswd] = React.useState('');
 
-  
   const loginHandler = (e)=>{
     e.preventDefault();
     userSignin({accountId, pswd}).then((response)=>{

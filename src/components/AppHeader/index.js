@@ -39,6 +39,21 @@ const AppHeader = (props)=>{
           <Typography variant="h6" className={classes.title}>
             Users
           </Typography>
+          <Typography variant="h6" className={classes.title} onClick={()=>props.history.replace('/users0')}>
+            Users0
+          </Typography>
+          <Typography variant="h6" className={classes.title} onClick={()=>props.history.replace('/users1')}>
+            Users1
+          </Typography>
+          <Typography variant="h6" className={classes.title} onClick={()=>props.history.replace('/users2')}>
+            Users2
+          </Typography>
+          <Typography variant="h6" className={classes.title} onClick={()=>props.history.replace('/users3')}>
+            Users3
+          </Typography>
+          <Typography variant="h6" className={classes.title} onClick={()=>props.history.replace('/users4')}>
+            Users4
+          </Typography>
           <Button color="inherit" onClick={logOut}>Log out</Button>
         </Toolbar>
       </AppBar>
