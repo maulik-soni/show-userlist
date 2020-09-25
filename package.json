@@ -1,6 +1,6 @@
 {
   "name": "show-userlist",
-  "homepage": "https://maulik-soni.github.io/show-userlist"
+  "homepage": "https://maulik-soni.github.io/show-userlist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
